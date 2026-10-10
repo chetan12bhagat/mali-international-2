@@ -1,14 +1,12 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SplashScreen({ children }: { children: React.ReactNode }) {
   const [showSplash, setShowSplash] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
-  const [progress, setProgress] = useState(0);
-
-  const mainVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const dismissSplash = useCallback(() => {
     setShowSplash(false);
@@ -22,7 +20,6 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
     setIsMounted(true);
 
     if (typeof window !== "undefined") {
-      // If the user reloaded the page (e.g. reviewing changes), allow splash to play again
       const navEntries = performance.getEntriesByType("navigation");
       const isReload =
         navEntries.length > 0 &&
@@ -32,7 +29,6 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
         sessionStorage.removeItem("mali_splash_seen_active");
       }
 
-      // Check if user already saw this splash in this session
       const hasSeen = sessionStorage.getItem("mali_splash_seen_active");
       if (hasSeen && !isReload) {
         setShowSplash(false);
@@ -40,120 +36,98 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
       }
     }
 
-    // Lock page scrolling during splash playback
+    // Lock body scroll during splash
     document.body.style.overflow = "hidden";
 
-    // Play video immediately
-    const v = mainVideoRef.current;
-    if (v) {
-      // Start playback (muted in HTML tag guarantees browser autoplay permission)
-      v.play()
-        .then(() => {
-          // Attempt to unmute immediately (sound always on)
-          try {
-            v.muted = false;
-          } catch {
-            // If browser blocks unmuted audio without gesture, stay muted until touch
-            v.muted = true;
-          }
-        })
-        .catch(() => {
-          // Fallback if low power mode or strict policy
-          v.muted = true;
-          v.play().catch(() => {});
-        });
-    }
-
-    // Unmute on first user touch, tap, or interaction anywhere on screen
-    const enableSoundOnInteraction = () => {
-      if (mainVideoRef.current) {
-        mainVideoRef.current.muted = false;
-      }
-      window.removeEventListener("pointerdown", enableSoundOnInteraction);
-      window.removeEventListener("touchstart", enableSoundOnInteraction);
-      window.removeEventListener("click", enableSoundOnInteraction);
-    };
-
-    window.addEventListener("pointerdown", enableSoundOnInteraction, { once: true });
-    window.addEventListener("touchstart", enableSoundOnInteraction, { once: true });
-    window.addEventListener("click", enableSoundOnInteraction, { once: true });
-
-    // Safety fallback: auto-dismiss after 12 seconds max if video playback stalls
-    const safetyTimer = setTimeout(() => {
+    // Auto dismiss after 2 seconds for a fast, elegant intro
+    const timer = setTimeout(() => {
       dismissSplash();
-    }, 12000);
+    }, 2000);
 
     return () => {
-      clearTimeout(safetyTimer);
+      clearTimeout(timer);
       document.body.style.overflow = "";
-      window.removeEventListener("pointerdown", enableSoundOnInteraction);
-      window.removeEventListener("touchstart", enableSoundOnInteraction);
-      window.removeEventListener("click", enableSoundOnInteraction);
     };
   }, [dismissSplash]);
-
-  const handleTimeUpdate = () => {
-    if (mainVideoRef.current && mainVideoRef.current.duration) {
-      const pct = (mainVideoRef.current.currentTime / mainVideoRef.current.duration) * 100;
-      setProgress(pct);
-    }
-  };
 
   return (
     <>
       <AnimatePresence mode="wait">
         {showSplash && isMounted && (
           <motion.div
-            key="splash-video-screen"
-            className="fixed inset-0 z-[99999] w-screen h-screen overflow-hidden select-none bg-black"
+            key="splash-logo-screen"
+            onClick={dismissSplash}
+            className="fixed inset-0 z-[99999] w-screen h-screen flex flex-col items-center justify-center bg-[#041B36] select-none cursor-pointer overflow-hidden"
             initial={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              scale: 1.02,
+              scale: 1.04,
               filter: "blur(6px)",
               transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
             }}
           >
-            {/* Top luxury gold loading progress line */}
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-white/10 z-40 overflow-hidden pointer-events-none">
+            {/* Ambient Background Glow */}
+            <div className="absolute w-[360px] h-[360px] rounded-full bg-[#C99A3A]/10 blur-[90px] pointer-events-none" />
+
+            {/* Centered Brand Presentation */}
+            <div className="relative z-10 flex flex-col items-center text-center px-6">
+              {/* Logo Emblem */}
               <motion.div
-                className="h-full bg-gradient-to-r from-[#C5A059] via-[#E6CA85] to-[#C5A059]"
-                style={{ width: `${Math.max(progress, 3)}%` }}
-                transition={{ ease: "linear", duration: 0.1 }}
+                initial={{ scale: 0.85, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="relative mb-6"
+              >
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white p-2.5 shadow-[0_0_50px_rgba(201,154,58,0.25)] border-2 border-[#C99A3A]/40 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/logos/main-logo.jpeg"
+                    alt="Mali International Logo"
+                    width={120}
+                    height={120}
+                    priority
+                    className="w-full h-full object-contain rounded-full"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Company Title */}
+              <motion.h1
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.6 }}
+                className="text-2xl sm:text-3xl font-bold tracking-[0.12em] text-white uppercase font-sans leading-none"
+              >
+                Mali International
+              </motion.h1>
+
+              {/* Subtle Gold Accent Divider */}
+              <motion.div
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: 48, opacity: 1 }}
+                transition={{ delay: 0.45, duration: 0.5 }}
+                className="h-[2px] bg-gradient-to-r from-transparent via-[#C99A3A] to-transparent my-3.5"
               />
+
+              {/* Tagline */}
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55, duration: 0.6 }}
+                className="text-xs sm:text-sm tracking-[0.2em] text-white/70 uppercase font-medium"
+              >
+                Global Trade &bull; Trusted Partnerships
+              </motion.p>
             </div>
 
-            {/* Skip Button */}
-            <motion.button
-              type="button"
-              onClick={dismissSplash}
-              className="absolute top-5 right-5 sm:top-7 sm:right-8 z-50 flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] tracking-wider uppercase font-semibold text-white/95 hover:text-white bg-black/50 hover:bg-black/70 backdrop-blur-md border border-white/20 hover:border-[#E6CA85] shadow-lg transition-all duration-200 cursor-pointer"
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              aria-label="Skip splash screen"
+            {/* Quick Skip Prompt */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ delay: 0.8, duration: 0.4 }}
+              className="absolute bottom-8 text-[11px] uppercase tracking-widest text-white/50"
             >
-              <span>Skip</span>
-              <svg className="w-3.5 h-3.5 text-[#E6CA85]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </motion.button>
-
-            {/* Full Screen Edge-to-Edge Video (Desktop & Mobile Unified) */}
-            <video
-              ref={mainVideoRef}
-              src="/splash.mp4"
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              disablePictureInPicture
-              controls={false}
-              onEnded={dismissSplash}
-              onTimeUpdate={handleTimeUpdate}
-              onClick={dismissSplash}
-              className="w-full h-full object-cover object-center cursor-pointer"
-            />
+              Tap anywhere to enter
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -165,6 +139,3 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
     </>
   );
 }
-
-
-
