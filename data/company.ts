@@ -3,7 +3,7 @@ export const company = {
   tagline: "Global Trade. Trusted Partnerships.",
   description:
     "Mali International helps international businesses source quality products from India through reliable supplier coordination, procurement support and export solutions.",
-  email: "contact@maliinternational.com",
+  email: "contact.mali.international@gmail.com",
   phone: "+91 80109 32020",
   whatsapp: "+91 80109 32020",
   address: "Mahabaleshwar, Satara, Maharashtra, India",

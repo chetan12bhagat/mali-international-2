@@ -69,38 +69,69 @@ export default function ContactPage() {
 
                 <div className="space-y-4">
                   {company.email && (
-                    <div>
-                      <span className="text-xs uppercase tracking-wider text-muted block mb-1">Email</span>
-                      <a href={`mailto:${company.email}`} className="text-navy font-medium hover:text-gold transition-colors">
-                        {company.email}
-                      </a>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-navy shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div className="min-w-0">
+                        <span className="text-xs uppercase tracking-wider text-muted block mb-0.5">Email</span>
+                        <a
+                          href={`mailto:${company.email}`}
+                          className="text-navy font-medium hover:text-gold transition-colors break-all sm:break-normal"
+                        >
+                          {company.email}
+                        </a>
+                      </div>
                     </div>
                   )}
                   {company.phone && (
-                    <div>
-                      <span className="text-xs uppercase tracking-wider text-muted block mb-1">Phone</span>
-                      <a href={`tel:${company.phone}`} className="text-navy font-medium hover:text-gold transition-colors">
-                        {company.phone}
-                      </a>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-navy shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs uppercase tracking-wider text-muted block mb-0.5">Phone</span>
+                        <a href={`tel:${company.phone}`} className="text-navy font-medium hover:text-gold transition-colors">
+                          {company.phone}
+                        </a>
+                      </div>
                     </div>
                   )}
                   {company.whatsapp && (
-                    <div>
-                      <span className="text-xs uppercase tracking-wider text-muted block mb-1">WhatsApp</span>
-                      <a
-                        href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-navy font-medium hover:text-gold transition-colors"
-                      >
-                        {company.whatsapp}
-                      </a>
-
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-navy shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.476-.15-.676.15-.2.301-.776.98-.952 1.18-.175.2-.35.226-.651.075-.3-.15-1.267-.467-2.413-1.489-.893-.796-1.495-1.78-1.67-2.081-.176-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.05-.376-.025-.526-.075-.15-.676-1.63-.927-2.233-.244-.588-.493-.508-.676-.517-.175-.009-.376-.01-.576-.01-.2 0-.526.075-.802.376-.275.301-1.052 1.028-1.052 2.507 0 1.479 1.077 2.908 1.228 3.108.15.2 2.12 3.238 5.137 4.542.718.31 1.278.496 1.715.635.72.23 1.376.197 1.895.12.578-.087 1.782-.728 2.032-1.43.251-.702.251-1.304.176-1.43-.076-.126-.276-.201-.577-.351z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs uppercase tracking-wider text-muted block mb-0.5">WhatsApp</span>
+                        <a
+                          href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-navy font-medium hover:text-gold transition-colors"
+                        >
+                          {company.whatsapp}
+                        </a>
+                      </div>
                     </div>
                   )}
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-muted block mb-1">Location &amp; Address</span>
-                    <span className="text-dark-text font-medium">{company.address}</span>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-navy shrink-0 mt-0.5">
+                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span className="text-xs uppercase tracking-wider text-muted block mb-0.5">Location &amp; Address</span>
+                      <span className="text-dark-text font-medium">{company.address}</span>
+                    </div>
                   </div>
 
                   {(company.social.instagram || company.social.facebook) && (
