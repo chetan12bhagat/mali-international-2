@@ -164,7 +164,7 @@ export default function ProductSearchFilter({
         </p>
 
         <span className="text-[11px] text-slate-400 italic hidden sm:inline">
-          Rates valid for 24h · Subject to final confirmation
+          Export Sourcing &amp; Procurement · Subject to final confirmation
         </span>
       </div>
 

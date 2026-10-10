@@ -472,16 +472,16 @@ export const nutritionFoodProducts: Product[] = [
     id: "dry-fruit-chikki",
     slug: "dry-fruit-chikki",
     name: "Dry Fruit Chikki",
-    variant: "Royal Nut Selection",
+    variant: "250g Box / Royal Nut Selection",
     category: "Nutrition Food",
     categorySlug: "nutrition-food",
     origin: "India (Mahabaleshwar, Satara, Maharashtra)",
     location: "Mahabaleshwar",
-    netWeight: "250g Box / Bulk Cartons",
-    packaging: "Export Retail Box (250g) / Master Shipping Carton",
+    netWeight: "250g Box",
+    packaging: "Export Retail Monocarton Box (250g) / Master Shipping Carton",
     availablePackSizes: ["250g Box", "Bulk Master Packs"],
     availability: "Available for Export",
-    image: "/images/products/dryfruit-jaggery-celebration.jpg",
+    image: "/images/products/dry-fruit-chikki.jpg",
     shortDescription:
       "Gourmet chikki crafted with roasted almonds, cashews, pistachios, and natural sweeteners for an elite healthy snack.",
     description:
@@ -495,12 +495,13 @@ export const nutritionFoodProducts: Product[] = [
     slug: "til-chikki",
     name: "Til Chikki",
     altName: "Sesame Chikki",
+    variant: "250g Box / Export Pack",
     category: "Nutrition Food",
     categorySlug: "nutrition-food",
     origin: "India (Mahabaleshwar, Satara, Maharashtra)",
     location: "Mahabaleshwar",
-    netWeight: "250g Box / Bulk Cartons",
-    packaging: "Export Retail Box (250g) / Master Shipping Carton",
+    netWeight: "250g Box",
+    packaging: "Export Retail Monocarton Box (250g) / Master Shipping Carton",
     availablePackSizes: ["250g Box", "Bulk Master Packs"],
     availability: "Available for Export",
     image: "/images/products/til-chikki.jpg",
@@ -511,6 +512,27 @@ export const nutritionFoodProducts: Product[] = [
     seoTitle: "Mali Til Chikki (Sesame Brittle) Export Supplier | Mali International",
     seoDescription:
       "Source Mali Til Chikki (Sesame Chikki). Export-quality 250g packs prepared with cleaned sesame seeds and pure jaggery.",
+  },
+  {
+    id: "hazelnuts-chikki",
+    slug: "hazelnuts-chikki",
+    name: "Hazelnuts Chikki",
+    variant: "Individual Flow Pack / Box",
+    category: "Nutrition Food",
+    categorySlug: "nutrition-food",
+    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
+    location: "Mahabaleshwar",
+    netWeight: "Flow-Wrap Pack / Retail Box",
+    packaging: "Export Retail Flow-Wrap / Display Box / Master Carton",
+    availablePackSizes: ["Single Flow Wrap", "Retail Box", "Master Carton"],
+    availability: "Available for Export",
+    image: "/images/products/hazelnuts-chikki.jpg",
+    shortDescription:
+      "Gourmet brittle confection blending roasted hazelnuts with delicate golden jaggery.",
+    description:
+      "Mali Hazelnuts Chikki blends high-grade roasted hazelnuts with natural jaggery for an international flavor profile with traditional Indian crunch.",
+    seoTitle: "Mali Hazelnuts Chikki Supplier | Mali International",
+    seoDescription: "Source premium Mali Hazelnuts Chikki for global distribution.",
   },
   {
     id: "rajgira-peanut-chikki",
@@ -524,7 +546,7 @@ export const nutritionFoodProducts: Product[] = [
     packaging: "Hygienic Flow-Wrap Bar / Display Box / Master Carton",
     availablePackSizes: ["Single Bar", "Retail Display Pack", "Master Carton (Bulk)"],
     availability: "Available for Export",
-    image: "/images/products/rajgira-peanut-chikki.png",
+    image: "/images/products/rajgira-peanut-chikki.jpg",
     shortDescription:
       "Nutritious superfood bar made with puffed amaranth (rajgira), crunchy roasted peanuts, and pure jaggery.",
     description:
@@ -532,24 +554,6 @@ export const nutritionFoodProducts: Product[] = [
     seoTitle: "Mali Rajgira Peanut Chikki Supplier & Export | Mali International",
     seoDescription:
       "Source authentic Mali Rajgira Peanut Chikki. Healthy puffed amaranth and peanut brittle snack with export packaging.",
-  },
-  {
-    id: "hazelnuts-chikki",
-    slug: "hazelnuts-chikki",
-    name: "Hazelnuts Chikki",
-    category: "Nutrition Food",
-    categorySlug: "nutrition-food",
-    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
-    location: "Mahabaleshwar",
-    packaging: "Export Retail Box / Master Carton",
-    availability: "Available for Export",
-    image: "/images/products/hazelnuts-chikki.jpg",
-    shortDescription:
-      "Gourmet brittle confection blending roasted hazelnuts with delicate golden jaggery.",
-    description:
-      "Mali Hazelnuts Chikki blends high-grade roasted hazelnuts with natural jaggery for an international flavor profile with traditional Indian crunch.",
-    seoTitle: "Mali Hazelnuts Chikki Supplier | Mali International",
-    seoDescription: "Source premium Mali Hazelnuts Chikki for global distribution.",
   },
   {
     id: "peanut-boiled",
