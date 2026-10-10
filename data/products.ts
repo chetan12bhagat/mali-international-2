@@ -414,15 +414,95 @@ export const foodCommodities: Product[] = [
    ======================================================= */
 export const chikkiProducts: Product[] = [
   {
-    id: "peanut-butter-chikki",
-    slug: "peanut-butter-chikki",
-    name: "Peanut Butter Chikki",
-    category: "Mali Chikki",
+    id: "hazelnuts-chikki",
+    slug: "hazelnuts-chikki",
+    name: "Hazelnuts Chikki",
+    category: "Nutrition Food",
     categorySlug: "chikki",
     origin: "India (Mahabaleshwar, Satara, Maharashtra)",
     location: "Mahabaleshwar",
-    packaging: "Individual Flow Wrap / Master Carton Box",
-    availability: "Available for Bulk Export",
+    packaging: "Hygienic Flow Pack / Retail Box",
+    availability: "Available for Export",
+    image: "/images/products/hazelnuts-chikki.jpg",
+    shortDescription:
+      "Premium confectionery bar crafted from selected Turkish hazelnuts and golden jaggery.",
+    description:
+      "Premium confectionery bar crafted from selected roasted hazelnuts and traditional jaggery. Rich in healthy nutrients, offering a crunchy gourmet experience.",
+    seoTitle: "Hazelnuts Chikki Exporter & Supplier | Mali International",
+    seoDescription:
+      "Source premium Hazelnuts Chikki from Mahabaleshwar. Gourmet nutty confectionery bar for international retail and export.",
+  },
+  {
+    id: "dryfruit-jaggery-chikkis-celebration",
+    slug: "dryfruit-jaggery-chikkis-celebration",
+    name: "Dryfruit Jaggery Chikki's Celebration",
+    variant: "Celebration Gift Pack",
+    category: "Nutrition Food",
+    categorySlug: "chikki",
+    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
+    location: "Mahabaleshwar",
+    packaging: "Luxury 3-Pack Gift Tray / Box",
+    availability: "Available for Export",
+    image: "/images/products/dryfruit-jaggery-celebration.jpg",
+    shortDescription:
+      "Exclusive Mali celebration gift presentation featuring an assortment of royal dryfruit jaggery chikkis.",
+    description:
+      "Exclusive Mali celebration gift pack featuring premium cashews, almonds, pistachios, and rich organic jaggery in an export-grade presentation box.",
+    seoTitle: "Dryfruit Jaggery Chikki Celebration Gift Pack | Mali International",
+    seoDescription:
+      "Luxury assorted dryfruit jaggery chikki gift boxes from Mahabaleshwar. Perfect for festive gifting and export distribution.",
+  },
+  {
+    id: "groundnut-chikki",
+    slug: "groundnut-chikki",
+    name: "Groundnut Chikki",
+    variant: "250g / 750g Family & Export Pack",
+    category: "Nutrition Food",
+    categorySlug: "chikki",
+    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
+    location: "Mahabaleshwar",
+    netWeight: "250g / 750g Box",
+    packaging: "Export Retail Monocarton Box / Bulk Master Carton",
+    availability: "Available for Export",
+    image: "/images/products/mali-groundnut-chikki.jpg",
+    shortDescription:
+      "Authentic Mahabaleshwar special Mali Groundnut Chikki made with whole crunchy peanuts and golden jaggery.",
+    description:
+      "Mali Groundnut Chikki represents the heritage recipe of Mahabaleshwar. Prepared using handpicked whole peanuts caramelized with premium jaggery, offering exceptional crunch, high energy, and long shelf life for international markets.",
+    seoTitle: "Mali Groundnut Chikki Box Supplier & Exporter | Mali International",
+    seoDescription:
+      "Buy & export authentic Mali Groundnut Chikki sourced directly from Mahabaleshwar, Satara. High quality traditional Indian snack.",
+  },
+  {
+    id: "peanut-crush-chikki",
+    slug: "peanut-crush-chikki",
+    name: "Peanut Crush Chikki",
+    variant: "750g Family & Export Pack",
+    category: "Nutrition Food",
+    categorySlug: "chikki",
+    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
+    location: "Mahabaleshwar",
+    packaging: "Individual Flow Wrap / 750g Box / Master Carton",
+    availability: "Available for Export",
+    image: "/images/products/mali-peanut-crush-chikki.jpg",
+    shortDescription:
+      "Substantial pack of finely crushed roasted groundnuts bound with pure jaggery for a crispy, soft-crunch bite.",
+    description:
+      "Mali Peanut Crush Chikki is made with finely crushed roasted groundnuts blended smoothly with traditional jaggery. Delivers a soft-crunch bite, rich nutty aroma, and clean nutrition without artificial preservatives.",
+    seoTitle: "Mali Peanut Crush Chikki Manufacturer & Exporter | Mali International",
+    seoDescription:
+      "Direct export sourcing for Mali Peanut Crush Chikki from Mahabaleshwar. High-protein traditional snack with custom export packaging.",
+  },
+  {
+    id: "peanut-butter-chikki",
+    slug: "peanut-butter-chikki",
+    name: "Peanut Butter Chikki",
+    category: "Nutrition Food",
+    categorySlug: "chikki",
+    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
+    location: "Mahabaleshwar",
+    packaging: "Aroma-Lock Flow Wrap / Master Carton Box",
+    availability: "Available for Export",
     image: "/images/products/mali-peanut-butter-chikki.jpg",
     shortDescription:
       "Delicious & healthy Mali Peanut Butter Chikki crafted from rich roasted peanuts and smooth butter jaggery blend.",
@@ -431,45 +511,6 @@ export const chikkiProducts: Product[] = [
     seoTitle: "Mali Peanut Butter Chikki Exporter & Supplier | Mali International",
     seoDescription:
       "Source authentic Mali Peanut Butter Chikki from Mahabaleshwar, Maharashtra. Premium confectionery for retail and wholesale export.",
-  },
-  {
-    id: "groundnut-chikki",
-    slug: "groundnut-chikki",
-    name: "Groundnut Chikki (250g Box)",
-    category: "Mali Chikki",
-    categorySlug: "chikki",
-    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
-    location: "Mahabaleshwar",
-    netWeight: "250 gm",
-    packaging: "250g Monocarton Retail Box / Master Export Carton",
-    availability: "Available for Bulk Export",
-    image: "/images/products/mali-groundnut-chikki.jpg",
-    shortDescription:
-      "Authentic Mahabaleshwar special Mali Groundnut Chikki in a 250g box pack, made with golden jaggery and crunchy peanuts.",
-    description:
-      "Mali Groundnut Chikki (250g Box) represents the heritage taste of Mahabaleshwar. Prepared using handpicked whole peanuts caramelized with premium jaggery, offering exceptional crunch, high energy, and long shelf life for international markets.",
-    seoTitle: "Mali Groundnut Chikki 250g Box Supplier | Mali International",
-    seoDescription:
-      "Buy & export 250g Mali Groundnut Chikki sourced directly from Mahabaleshwar, Satara. High quality traditional Indian chikki.",
-  },
-  {
-    id: "peanut-crush-chikki",
-    slug: "peanut-crush-chikki",
-    name: "Peanut Crush Chikki",
-    category: "Mali Chikki",
-    categorySlug: "chikki",
-    origin: "India (Mahabaleshwar, Satara, Maharashtra)",
-    location: "Mahabaleshwar",
-    packaging: "Individual Flow Wrap / Master Carton Box",
-    availability: "Available for Bulk Export",
-    image: "/images/products/mali-peanut-crush-chikki.jpg",
-    shortDescription:
-      "Crispy and wholesome Mali Peanut Crush Chikki, finely crushed roasted nuts bound with pure jaggery for easy snacking.",
-    description:
-      "Mali Peanut Crush Chikki is made with finely crushed roasted groundnuts blended smoothly with traditional jaggery. Delivers a soft-crunch bite, rich nutty aroma, and clean nutrition without artificial preservatives or refined sugars.",
-    seoTitle: "Mali Peanut Crush Chikki Manufacturer & Exporter | Mali International",
-    seoDescription:
-      "Direct export sourcing for Mali Peanut Crush Chikki from Mahabaleshwar. High-protein traditional snack with custom export packaging.",
   },
 ];
 
@@ -508,9 +549,9 @@ export const productCategories: ProductCategory[] = [
     title: "Mali Chikki",
     slug: "chikki",
     description:
-      "Authentic Mahabaleshwar special Mali Chikki including Peanut Butter Chikki, Groundnut Chikki (250g Box), and Peanut Crush Chikki.",
+      "Authentic Mahabaleshwar special Mali Chikki including Hazelnuts, Dryfruit Celebration, Groundnut, Peanut Crush, and Peanut Butter chikkis.",
     image: "/images/products/mali-groundnut-chikki.jpg",
-    productCount: 3,
+    productCount: 5,
     products: chikkiProducts,
   },
   {
@@ -542,12 +583,18 @@ export const featuredProducts: string[] = [
 /* =======================================================
    HELPER UTILITIES
    ======================================================= */
+export const allCatalogProducts: Product[] = [
+  ...agriculturalProducts,
+  ...chikkiProducts,
+  ...foodCommodities,
+];
+
 export function getProductBySlug(slug: string): Product | undefined {
-  return agriculturalProducts.find((p) => p.slug === slug);
+  return allCatalogProducts.find((p) => p.slug === slug);
 }
 
 export function getAllProductSlugs(): string[] {
-  return agriculturalProducts.map((p) => p.slug);
+  return allCatalogProducts.map((p) => p.slug);
 }
 
 export function getRelatedProducts(currentSlug: string, limit: number = 4): Product[] {
@@ -555,7 +602,7 @@ export function getRelatedProducts(currentSlug: string, limit: number = 4): Prod
   if (!current) return agriculturalProducts.slice(0, limit);
 
   // Same category, excluding current
-  const sameCategory = agriculturalProducts.filter(
+  const sameCategory = allCatalogProducts.filter(
     (p) => p.slug !== currentSlug && p.category === current.category
   );
 
@@ -563,8 +610,8 @@ export function getRelatedProducts(currentSlug: string, limit: number = 4): Prod
     return sameCategory.slice(0, limit);
   }
 
-  // Other agricultural items
-  const others = agriculturalProducts.filter(
+  // Other items
+  const others = allCatalogProducts.filter(
     (p) => p.slug !== currentSlug && p.category !== current.category
   );
 
@@ -582,3 +629,4 @@ export function getFeaturedAgriProducts(limit: number = 6): Product[] {
   ];
   return agriculturalProducts.filter((p) => featuredSlugs.includes(p.slug)).slice(0, limit);
 }
+
