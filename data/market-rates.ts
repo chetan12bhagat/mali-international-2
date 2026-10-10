@@ -81,5 +81,5 @@ export function getRateStatusInfo(
 }
 
 export function getAllMarketRates(): Product[] {
-  return agriculturalProducts.filter((p) => p.rate !== undefined);
+  return agriculturalProducts;
 }

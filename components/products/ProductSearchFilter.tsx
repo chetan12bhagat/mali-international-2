@@ -12,12 +12,10 @@ interface ProductSearchFilterProps {
 
 const CATEGORIES = [
   "All",
-  "Nutrition Food",
-  "Vegetables",
   "Fruits",
+  "Vegetables",
+  "Nutrition Food",
   "Pulses & Lentils",
-  "Spices",
-  "Coconut",
 ] as const;
 
 type SortOption = "featured" | "name-asc" | "name-desc";
@@ -45,7 +43,11 @@ export default function ProductSearchFilter({
       .filter((product) => {
         const matchesCategory =
           selectedCategory === "All" ||
-          product.category.toLowerCase() === selectedCategory.toLowerCase();
+          product.category.toLowerCase() === selectedCategory.toLowerCase() ||
+          (selectedCategory === "Fruits" && (product.categorySlug === "fruits" || product.category === "Fruits")) ||
+          (selectedCategory === "Vegetables" && (product.categorySlug === "vegetables" || product.category === "Vegetables")) ||
+          (selectedCategory === "Nutrition Food" && (product.categorySlug === "nutrition-food" || product.category === "Nutrition Food")) ||
+          (selectedCategory === "Pulses & Lentils" && (product.categorySlug === "pulses-lentils" || product.category === "Pulses & Lentils"));
 
         const matchesSearch =
           !q ||

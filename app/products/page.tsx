@@ -8,7 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { productCategories, getFeaturedAgriProducts } from "@/data/products";
+import { primaryProductCategories, getFeaturedAgriProducts } from "@/data/products";
 
 export const metadata: Metadata = generatePageMetadata("products");
 
@@ -25,12 +25,11 @@ export default function ProductsPage() {
             <SectionLabel className="mb-4">MALI INTERNATIONAL</SectionLabel>
             <h1 className="text-dark-text mb-6 max-w-3xl">Products We Source</h1>
             <p className="text-xl text-muted max-w-[640px] leading-relaxed mb-8">
-              Explore selected agricultural products and commodities sourced from India for
-              international buyers.
+              Explore selected agricultural produce, nutrition foods, and pulses sourced from India for international buyers.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href="/products/agriculture" size="lg">
-                View Agricultural Products
+                View All Products
               </Button>
               <Button href="/request-quote" variant="outline" size="lg">
                 Request Export Quote
@@ -79,17 +78,17 @@ export default function ProductsPage() {
           <AnimatedSection>
             <div className="mb-12 max-w-2xl">
               <SectionLabel className="mb-4">CATEGORIES</SectionLabel>
-              <h2 className="text-dark-text">Our Product Verticals</h2>
+              <h2 className="text-dark-text">Our 4 Core Categories</h2>
               <p className="text-muted mt-4 text-base md:text-lg">
-                Structured sourcing across agriculture, food commodities, minerals, and specialized contract manufacturing.
+                Structured sourcing across Fruits, Vegetables, Nutrition Food, and Pulses &amp; Lentils.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {productCategories.map((category) => (
+              {primaryProductCategories.map((category) => (
                 <Link
                   key={category.id}
-                  href={`/products/${category.slug}`}
+                  href={category.slug === "chikki" ? "/products/chikki" : `/products/agriculture?category=${encodeURIComponent(category.title)}`}
                   className="group relative block overflow-hidden rounded-[4px] border border-light-gray bg-white shadow-xs hover:border-gold/50 transition-all duration-300"
                 >
                   <div className="relative h-64 w-full overflow-hidden bg-slate-100">

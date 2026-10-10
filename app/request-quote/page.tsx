@@ -41,7 +41,7 @@ function QuoteForm() {
     resolver: zodResolver(quoteFormSchema),
     defaultValues: {
       product: defaultProductName || "",
-      unit: matchedProduct?.rateUnit?.replace("/", "").trim() || "Metric Tons (MT)",
+      unit: "Metric Tons (MT)",
       destination: matchedProduct?.destination || "",
       packaging: matchedProduct?.packaging || "",
     },
