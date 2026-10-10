@@ -241,18 +241,18 @@ function ProductCategoriesSection() {
       tag: "6 Commodities",
     },
     {
+      title: "Mali Chikki & Nutrition",
+      desc: "Authentic Mahabaleshwar special Groundnut Chikki (250g), Peanut Crush Chikki, and Peanut Butter Chikki.",
+      href: "/products/chikki",
+      image: "/images/products/mali-groundnut-chikki.jpg",
+      tag: "Mahabaleshwar Belt",
+    },
+    {
       title: "Fresh Fruits",
-      desc: "Cavendish bananas from Mahabaleshwar and premium Bhagwa pomegranates.",
+      desc: "Cavendish bananas and premium Bhagwa pomegranates from certified farm belts.",
       href: "/products/agriculture?category=Fruits",
       image: "/images/products/banana.jpg",
       tag: "3 Commodities",
-    },
-    {
-      title: "Mali Chikki",
-      desc: "Authentic Mahabaleshwar Peanut Butter, 250g Groundnut, and Peanut Crush chikkis.",
-      href: "/products/chikki",
-      image: "/images/products/mali-groundnut-chikki.jpg",
-      tag: "Mahabaleshwar Special",
     },
     {
       title: "Spices",

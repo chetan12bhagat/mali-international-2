@@ -37,6 +37,11 @@ export default function Footer() {
                 {company.tagline}
               </p>
 
+              {/* Location indicator */}
+              <div className="mt-4 text-xs text-white/40">
+                <p className="font-medium text-white/70">{company.address}</p>
+              </div>
+
               {/* Social Media Links */}
               <div className="mt-6 flex items-center gap-2.5">
                 {company.social.instagram && (
@@ -72,7 +77,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-2.5">
                   {footerNavigation.company.map((item) => (
-                    <li key={item.href}>
+                    <li key={`comp-${item.label}`}>
                       <Link
                         href={item.href}
                         className="text-[0.875rem] text-white/60 hover:text-gold transition-colors duration-200"
@@ -89,7 +94,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-2.5">
                   {footerNavigation.products.map((item) => (
-                    <li key={item.href}>
+                    <li key={`prod-${item.label}`}>
                       <Link
                         href={item.href}
                         className="text-[0.875rem] text-white/60 hover:text-gold transition-colors duration-200"
@@ -106,7 +111,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-2.5">
                   {footerNavigation.services.map((item) => (
-                    <li key={item.href}>
+                    <li key={`serv-${item.label}`}>
                       <Link
                         href={item.href}
                         className="text-[0.875rem] text-white/60 hover:text-gold transition-colors duration-200"
@@ -123,7 +128,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-2.5">
                   {footerNavigation.resources.map((item) => (
-                    <li key={item.href}>
+                    <li key={`res-${item.label}`}>
                       <Link
                         href={item.href}
                         className="text-[0.875rem] text-white/60 hover:text-gold transition-colors duration-200"
@@ -141,7 +146,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30">
-            © {currentYear} {company.name}. All Rights Reserved.
+            © {currentYear} {company.name}. All Rights Reserved. Mahabaleshwar, Satara, Maharashtra, India.
           </p>
           <div className="flex items-center gap-6">
             <Link

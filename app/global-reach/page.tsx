@@ -88,7 +88,7 @@ export default function GlobalReachPage() {
               </div>
               <div className="flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 w-full">
-                  {["Agriculture", "Commodities", "Mali Chikki", "Manufacturing"].map((item, i) => (
+                  {["Agriculture", "Commodities", "Minerals", "Manufacturing"].map((item, i) => (
                     <div key={i} className="p-6 bg-off-white text-center">
                       <span className="text-sm font-medium text-dark-text">{item}</span>
                     </div>

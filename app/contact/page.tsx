@@ -99,11 +99,8 @@ export default function ContactPage() {
                     </div>
                   )}
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-muted block mb-1">Address &amp; Location</span>
-                    <span className="text-dark-text font-medium block">{company.address}</span>
-                    <span className="text-xs text-amber-800 font-semibold mt-1 inline-block bg-amber-50 px-2 py-0.5 rounded-[2px] border border-amber-200">
-                      Sourcing Belt: {company.sourcingBelt}
-                    </span>
+                    <span className="text-xs uppercase tracking-wider text-muted block mb-1">Location &amp; Address</span>
+                    <span className="text-dark-text font-medium">{company.address}</span>
                   </div>
 
                   {(company.social.instagram || company.social.facebook) && (

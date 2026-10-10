@@ -81,7 +81,7 @@ export default function ProductsPage() {
               <SectionLabel className="mb-4">CATEGORIES</SectionLabel>
               <h2 className="text-dark-text">Our Product Verticals</h2>
               <p className="text-muted mt-4 text-base md:text-lg">
-                Structured sourcing across agricultural produce, bulk commodities, authentic Mahabaleshwar Mali Chikkis, and custom export requirements.
+                Structured sourcing across agriculture, food commodities, minerals, and specialized contract manufacturing.
               </p>
             </div>
 

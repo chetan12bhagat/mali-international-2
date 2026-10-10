@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import { company, siteConfig } from "@/data/company";
 
-interface PageSEO {
+export interface PageSEO {
   title: string;
   description: string;
   path: string;
@@ -27,13 +26,13 @@ export const pageSEO: Record<string, PageSEO> = {
     path: "/products",
   },
   agriculture: {
-    title: "Agricultural Products Exporter India | Mali International",
+    title: "Indian Agricultural Products Exporter | Mali International",
     description:
-      "Sourcing selected Indian agricultural products for international buyers. Fresh produce, grains, pulses, spices and more from India.",
+      "Source fresh Indian agricultural produce — G4 chillies, lemons, pomegranates, drumsticks, bananas and more with daily indicative market rates.",
     path: "/products/agriculture",
   },
   foodCommodities: {
-    title: "Food & Commodities Sourcing India | Mali International",
+    title: "Food & Agricultural Commodities Sourcing India | Mali International",
     description:
       "Sourcing food-grade commodities and processed food products from Indian suppliers for international buyers.",
     path: "/products/food-commodities",
@@ -41,112 +40,115 @@ export const pageSEO: Record<string, PageSEO> = {
   chikki: {
     title: "Mali Chikki Exporter & Sourcing Mahabaleshwar | Mali International",
     description:
-      "Source authentic Mali Peanut Butter Chikki, Groundnut Chikki (250g), and Peanut Crush Chikki directly from Mahabaleshwar, Satara, Maharashtra, India.",
+      "Source authentic Mali Groundnut Chikki (250g), Peanut Crush Chikki, and Peanut Butter Chikki directly from the Mahabaleshwar sourcing belt, Satara, Maharashtra, India.",
     path: "/products/chikki",
   },
   minerals: {
     title: "Mali Chikki Exporter & Sourcing Mahabaleshwar | Mali International",
     description:
-      "Source authentic Mali Peanut Butter Chikki, Groundnut Chikki (250g), and Peanut Crush Chikki directly from Mahabaleshwar, Satara, Maharashtra, India.",
+      "Source authentic Mali Groundnut Chikki (250g), Peanut Crush Chikki, and Peanut Butter Chikki directly from the Mahabaleshwar sourcing belt, Satara, Maharashtra, India.",
     path: "/products/chikki",
   },
   customSourcing: {
     title: "Custom Product Sourcing India | Mali International",
     description:
-      "Tailored sourcing solutions for specific product requirements, OEM and private label needs from Indian suppliers.",
+      "Tailored product sourcing solutions from India. Tell us your requirements and we identify, verify and coordinate with suitable suppliers.",
     path: "/products/custom-sourcing",
   },
   services: {
-    title: "India Sourcing & Export Services | Mali International",
+    title: "Sourcing & Procurement Services India | Mali International",
     description:
-      "Comprehensive sourcing and export services from India including product sourcing, procurement, quality coordination, packaging and logistics.",
+      "Comprehensive sourcing services from India — product identification, supplier coordination, procurement, quality oversight and logistics support.",
     path: "/services",
   },
   industries: {
     title: "Industries We Serve | Mali International",
     description:
-      "Mali International serves importers, distributors, wholesalers, retailers, food businesses and industrial buyers with India sourcing solutions.",
+      "Serving food & beverage, agriculture, wholesale, retail, construction, manufacturing and hospitality businesses worldwide.",
     path: "/industries",
   },
   globalReach: {
-    title: "Global Sourcing From India | Mali International",
+    title: "Global Reach — India Sourcing Worldwide | Mali International",
     description:
-      "Connecting Indian supply with international markets across the Middle East, Africa, Europe, Asia and the Americas.",
+      "Connecting Indian suppliers with businesses across the Middle East, Southeast Asia, Europe, North America, Africa and South America.",
     path: "/global-reach",
   },
   quality: {
     title: "Quality & Process | Mali International",
     description:
-      "Our quality coordination process ensures product specifications, supplier standards and packaging requirements are met for international trade.",
+      "Our approach to quality coordination — product specifications, supplier verification, packaging standards and pre-shipment checks.",
     path: "/quality",
   },
   sustainability: {
-    title: "Responsible Trade | Mali International",
+    title: "Sustainability & Responsible Sourcing | Mali International",
     description:
-      "Mali International is committed to responsible sourcing practices, farmer relationships and sustainable trade partnerships.",
+      "Promoting responsible sourcing practices across our supplier network in India — environmental care, fair trade and ethical partnerships.",
     path: "/sustainability",
   },
   insights: {
-    title: "Insights & Resources | Mali International",
+    title: "India Sourcing Insights & Market Updates | Mali International",
     description:
-      "Expert insights on India sourcing, international procurement, agricultural exports and global trade trends.",
+      "Practical insights, guides and updates on sourcing products from India, international trade trends and procurement best practices.",
     path: "/insights",
   },
   contact: {
-    title: "Contact Mali International | India Export & Sourcing",
+    title: "Contact Mali International | India Sourcing Partner",
     description:
-      "Get in touch with Mali International for India sourcing inquiries, product requirements and export solutions.",
+      "Get in touch with Mali International to discuss your product sourcing requirements from India. Based in Mahabaleshwar, Satara, Maharashtra.",
     path: "/contact",
   },
   requestQuote: {
-    title: "Request a Quote | Mali International",
+    title: "Request a Sourcing Quote | Mali International",
     description:
-      "Submit your sourcing requirement to Mali International. Tell us what you need and we will help you explore the right sourcing path from India.",
+      "Submit your product specifications and requirements to receive a sourcing quotation from Mali International.",
     path: "/request-quote",
+  },
+  marketRates: {
+    title: "Live Sourcing Indicative Rates & Specifications | Mali International",
+    description:
+      "View current indicative export rates, packaging details, and specifications for Indian agricultural commodities.",
+    path: "/market-rates",
   },
   privacyPolicy: {
     title: "Privacy Policy | Mali International",
-    description: "Privacy policy for Mali International website and services.",
+    description: "Privacy policy and data protection information for Mali International.",
     path: "/privacy-policy",
   },
   terms: {
     title: "Terms & Conditions | Mali International",
-    description: "Terms and conditions for Mali International website and services.",
+    description: "Terms and conditions for Mali International services and website use.",
     path: "/terms",
   },
 };
 
-export function generatePageMetadata(pageKey: string): Metadata {
-  const seo = pageSEO[pageKey];
-  if (!seo) return {};
+export function generatePageMetadata(key: string): Metadata {
+  const seo = pageSEO[key];
+  if (!seo) {
+    return {
+      title: "Mali International | India Export & Sourcing Company",
+      description:
+        "Connecting international businesses with trusted Indian suppliers across agriculture, food commodities and authentic Mali Chikki from Mahabaleshwar.",
+    };
+  }
 
   return {
     title: seo.title,
     description: seo.description,
     alternates: {
-      canonical: `${siteConfig.url}${seo.path}`,
+      canonical: seo.path,
     },
     openGraph: {
       title: seo.title,
       description: seo.description,
-      url: `${siteConfig.url}${seo.path}`,
-      siteName: siteConfig.siteName,
-      locale: siteConfig.locale,
+      url: seo.path,
+      siteName: "Mali International",
+      locale: "en_IN",
       type: "website",
-      images: [
-        {
-          url: `${siteConfig.url}/logos/main-logo.jpeg`,
-          width: 1080,
-          height: 1065,
-          alt: company.name,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [`${siteConfig.url}/logos/main-logo.jpeg`],
     },
   };
 }

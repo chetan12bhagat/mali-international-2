@@ -1,2 +1,5 @@
-export { metadata, default } from "../chikki/page";
+import { redirect } from "next/navigation";
 
+export default function MineralsPage() {
+  redirect("/products/chikki");
+}

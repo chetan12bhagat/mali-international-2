@@ -7,8 +7,7 @@ export const company = {
   phone: "+91 80109 32020",
   whatsapp: "+91 80109 32020",
   address: "Mahabaleshwar, Satara, Maharashtra, India",
-  location: "Mahabaleshwar, Satara, Maharashtra, India",
-  sourcingBelt: "Mahabaleshwar",
+
   city: "Mahabaleshwar",
   district: "Satara",
   state: "Maharashtra",
@@ -44,4 +43,3 @@ export function createWhatsAppEnquiryUrl(
 
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 }
-
