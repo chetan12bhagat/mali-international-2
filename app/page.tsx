@@ -258,7 +258,7 @@ function ProductCategoriesSection() {
       title: "Pulses & Lentils",
       desc: "Sortex-cleaned chickpeas (Kabuli & Desi), red lentils, toor dal, and moong beans.",
       href: "/products/agriculture?category=Pulses%20%26%20Lentils",
-      image: "/images/products/onion-sourcing-editorial.jpg",
+      image: "/images/products/chickpeas.jpg",
       tag: "5 Commodities",
     },
     {

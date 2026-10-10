@@ -620,7 +620,7 @@ export const pulsesLentilsProducts: Product[] = [
     packaging: "Export PP / Jute Bags with inner liner",
     availablePackSizes: ["25 kg", "50 kg", "1 MT Jumbo Bag"],
     availability: "Available for Export",
-    image: "/images/products/onion-sourcing-editorial.jpg",
+    image: "/images/products/chickpeas.jpg",
     shortDescription:
       "Sortex-cleaned Kabuli chickpeas (7mm, 8mm, 9mm counts) and Desi chana sorted for uniform caliber and zero defect.",
     description:
@@ -639,7 +639,7 @@ export const pulsesLentilsProducts: Product[] = [
     netWeight: "25 kg / 50 kg",
     packaging: "Export PP Bag with Moisture Liner",
     availability: "Available for Export",
-    image: "/images/products/turmeric.jpg",
+    image: "/images/products/red-lentils.jpg",
     shortDescription:
       "Whole and split football-grade red lentils (Masoor Dal) polished and free from foreign matter.",
     description:
@@ -658,7 +658,7 @@ export const pulsesLentilsProducts: Product[] = [
     netWeight: "25 kg / 50 kg",
     packaging: "Export PP / BoPP Bags",
     availability: "Available for Export",
-    image: "/images/products/small-onion.jpg",
+    image: "/images/products/toor-dal.jpg",
     shortDescription:
       "Oily and unpolished whole / split yellow pigeon peas (Toor Dal) sourced from India's premier pulse markets.",
     description:
@@ -677,7 +677,7 @@ export const pulsesLentilsProducts: Product[] = [
     netWeight: "25 kg / 50 kg",
     packaging: "PP Woven Bags",
     availability: "Available for Export",
-    image: "/images/products/g4-chilli.jpg",
+    image: "/images/products/green-mung-beans.jpg",
     shortDescription:
       "Whole green mung beans and split yellow moong with high germination rate and bright natural luster.",
     description:
@@ -696,7 +696,7 @@ export const pulsesLentilsProducts: Product[] = [
     netWeight: "25 kg / 50 kg",
     packaging: "PP Bags with Moisture Barrier",
     availability: "Available for Export",
-    image: "/images/products/semi-husk-coconut.jpg",
+    image: "/images/products/black-matpe.jpg",
     shortDescription:
       "Whole black gram and split white urad dal with high starch and protein density for food processing.",
     description:
@@ -841,7 +841,7 @@ export const productCategories: ProductCategory[] = [
     slug: "pulses-lentils",
     description:
       "Export-grade Sortex-cleaned Indian pulses and legumes including Kabuli chickpeas, red lentils, toor dal, and moong beans.",
-    image: "/images/products/onion-sourcing-editorial.jpg",
+    image: "/images/products/chickpeas.jpg",
     productCount: pulsesLentilsProducts.length,
     products: pulsesLentilsProducts,
   },
