@@ -12,9 +12,10 @@ interface ProductSearchFilterProps {
 
 const CATEGORIES = [
   "All",
+  "Nutrition Food",
   "Vegetables",
   "Fruits",
-  "Fresh Produce",
+  "Pulses & Lentils",
   "Spices",
   "Coconut",
 ] as const;
