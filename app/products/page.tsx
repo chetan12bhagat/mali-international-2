@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, TrendingUp, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { generatePageMetadata } from "@/data/seo";
 import Container from "@/components/layout/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -150,13 +150,17 @@ export default function ProductsPage() {
                 className="bg-white border border-light-gray rounded-[4px] p-4 flex flex-col justify-between shadow-2xs hover:shadow-md transition-shadow"
               >
                 <div>
-                  <div className="relative aspect-4/3 rounded-[3px] overflow-hidden mb-3 bg-slate-100">
+                  <div className="relative aspect-4/3 rounded-[3px] overflow-hidden mb-3 bg-slate-50 flex items-center justify-center">
                     <Image
                       src={p.image || "/images/products/onion.jpg"}
                       alt={p.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover"
+                      className={
+                        p.categorySlug === "nutrition-food" || p.category === "Nutrition Food"
+                          ? "object-contain object-center p-2"
+                          : "object-cover object-center"
+                      }
                     />
                   </div>
                   <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">

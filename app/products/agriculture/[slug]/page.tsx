@@ -175,14 +175,18 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             {/* LEFT COLUMN: 4:3 Image & Quality Box */}
             <div className="lg:col-span-5 xl:col-span-6 space-y-6">
               {/* Product Image Frame */}
-              <div className="relative aspect-[4/3] w-full rounded-[4px] overflow-hidden bg-slate-100 border border-light-gray shadow-xs">
+              <div className="relative aspect-[4/3] w-full rounded-[4px] overflow-hidden bg-slate-50 border border-light-gray shadow-xs flex items-center justify-center">
                 <Image
                   src={product.image || "/images/products/onion.jpg"}
                   alt={product.name}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
+                  className={
+                    product.categorySlug === "nutrition-food" || product.category === "Nutrition Food"
+                      ? "object-contain object-center p-3"
+                      : "object-cover object-center"
+                  }
                 />
                 {/* Category & Variant Badge */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">

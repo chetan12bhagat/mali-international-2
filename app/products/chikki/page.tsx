@@ -106,13 +106,13 @@ export default function ChikkiProductsPage() {
                 <AnimatedSection key={product.id} delay={i * 0.1}>
                   <div className="group bg-white rounded-[4px] border border-slate-200/90 hover:border-gold/50 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col h-full overflow-hidden">
                     {/* Image */}
-                    <div className="relative aspect-[4/3] w-full bg-slate-100 overflow-hidden">
+                    <div className="relative aspect-[4/3] w-full bg-slate-50/80 border-b border-slate-100 overflow-hidden flex items-center justify-center p-2.5">
                       <Image
-                        src={product.image || "/images/products/mali-groundnut-chikki.jpg"}
+                        src={product.image || "/images/products/groundnut-chikki.jpg"}
                         alt={product.name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain object-center transition-transform duration-500 group-hover:scale-105 p-2"
                       />
                       <div className="absolute top-3 right-3 px-2.5 py-1 bg-navy/90 text-gold text-[10px] font-bold uppercase tracking-wider rounded-[3px] backdrop-blur-xs">
                         {product.netWeight || "Export Pack"}

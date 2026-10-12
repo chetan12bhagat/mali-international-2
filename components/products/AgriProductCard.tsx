@@ -31,7 +31,11 @@ export default function AgriProductCard({ product, priority = false }: AgriProdu
           alt={product.name}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+          className={
+            product.categorySlug === "nutrition-food" || product.category === "Nutrition Food"
+              ? "object-contain object-center p-2.5 transition-transform duration-500 group-hover:scale-[1.03]"
+              : "object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+          }
           priority={priority}
         />
         {/* Subtle Category Pill on Image */}
