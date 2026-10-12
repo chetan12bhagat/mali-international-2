@@ -15,11 +15,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Mali International | India Export & Global Sourcing Company",
+    default: "Mali International | Indian Export & Import Company",
     template: "%s",
   },
   description: company.description,
   keywords: [
+    "Indian Export & Import Company",
+    "Global Sourcing Partner",
     "India sourcing company",
     "India export company",
     "Indian exporters",
@@ -31,12 +33,22 @@ export const metadata: Metadata = {
     "B2B sourcing India",
   ],
   authors: [{ name: company.name }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.siteName,
-    title: "Mali International | India Export & Global Sourcing Company",
+    title: "Mali International | Indian Export & Import Company",
     description: company.description,
     images: [
       {
@@ -49,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mali International | India Export & Global Sourcing Company",
+    title: "Mali International | Indian Export & Import Company",
     description: company.description,
     images: ["/logos/main-logo.jpeg"],
   },

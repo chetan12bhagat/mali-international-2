@@ -18,10 +18,10 @@ export default function AboutPage() {
         <Container>
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About" }]} />
           <AnimatedSection>
-            <SectionLabel className="mb-4">About Us</SectionLabel>
+            <SectionLabel className="mb-4">Indian Export &amp; Import Company | Global Sourcing Partner</SectionLabel>
             <h1 className="text-dark-text mb-6 max-w-3xl">About Mali International</h1>
             <p className="text-xl text-muted max-w-[600px] leading-relaxed">
-              Connecting trusted Indian supply with global business.
+              Your Global Sourcing Partner for Quality Agricultural Products and International Trade.
             </p>
           </AnimatedSection>
         </Container>
@@ -44,11 +44,12 @@ export default function AboutPage() {
               </div>
               <div className="lg:col-span-7">
                 <h2 className="text-dark-text mb-6">
-                  A sourcing partner built on trust and practical support.
+                  An Indian export and import company built on trust and practical support.
                 </h2>
                 <p className="text-muted leading-relaxed mb-6">
                   Mali International was established to bridge the gap between India&apos;s diverse supplier
-                  ecosystem and international businesses seeking reliable sourcing partners. We understand
+                  ecosystem and international businesses seeking reliable sourcing partners. As an Indian
+                  export and import company and global sourcing partner, we understand
                   the challenges that come with international procurement — finding the right suppliers,
                   ensuring quality consistency, managing logistics and navigating documentation.
                 </p>

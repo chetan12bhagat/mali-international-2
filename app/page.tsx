@@ -25,21 +25,21 @@ function Hero() {
       <Container className="relative z-10">
         <div className="max-w-3xl">
           <AnimatedSection>
-            <SectionLabel className="mb-6">Mali International</SectionLabel>
+            <SectionLabel className="mb-6">
+              Indian Export &amp; Import Company | Global Sourcing Partner
+            </SectionLabel>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1}>
             <h1 className="text-dark-text mb-6 leading-[1.08]">
-              Connecting Indian Supply{" "}
-              <span className="block">With Global Demand.</span>
+              Mali International —{" "}
+              <span className="block text-navy">Indian Export &amp; Import Company</span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
             <p className="text-lg md:text-xl text-muted max-w-[560px] mb-10 leading-relaxed">
-              Mali International helps international businesses source quality
-              products from India through reliable supplier coordination,
-              procurement support and export solutions.
+              Your Global Sourcing Partner for Quality Agricultural Products and International Trade. Mali International helps international businesses source quality products from India through reliable supplier coordination, procurement support, and export solutions.
             </p>
           </AnimatedSection>
 
@@ -132,14 +132,10 @@ function AboutIntro() {
             </div>
             <div className="lg:col-span-8">
               <h2 className="text-dark-text mb-6">
-                Building reliable connections between Indian suppliers and global
-                businesses.
+                Your Global Sourcing Partner connecting Indian supply with international demand.
               </h2>
               <p className="text-muted leading-relaxed max-w-[640px] mb-8">
-                Mali International works with businesses seeking dependable
-                sourcing opportunities from India. We support product
-                identification, supplier coordination, procurement, quality
-                requirements and export processes.
+                Mali International is an Indian export and import company and global sourcing partner. We work with businesses seeking dependable sourcing opportunities from India, supporting product identification, supplier coordination, procurement, quality requirements and export processes.
               </p>
               <Link
                 href="/about"

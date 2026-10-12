@@ -1,8 +1,8 @@
 export const company = {
   name: "Mali International",
-  tagline: "Global Trade. Trusted Partnerships.",
+  tagline: "Global Trade & Sourcing",
   description:
-    "Mali International helps international businesses source quality products from India through reliable supplier coordination, procurement support and export solutions.",
+    "Mali International is an Indian export and import company and global sourcing partner for agricultural products and international trade.",
   email: "contact.mali.international@gmail.com",
   phone: "+91 80109 32020",
   whatsapp: "+91 80109 32020",

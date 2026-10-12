@@ -8,15 +8,15 @@ export interface PageSEO {
 
 export const pageSEO: Record<string, PageSEO> = {
   home: {
-    title: "Mali International | India Export & Global Sourcing Company",
+    title: "Mali International | Indian Export & Import Company",
     description:
-      "Mali International connects global businesses with quality Indian products. Expert sourcing, procurement and export solutions for agriculture, commodities and authentic Mali Chikki from Mahabaleshwar.",
+      "Mali International is an Indian export and import company and global sourcing partner for agricultural products and international trade.",
     path: "/",
   },
   about: {
-    title: "About Mali International | India Export & Sourcing Partner",
+    title: "About Mali International | Indian Export & Import Company",
     description:
-      "Learn about Mali International, an India-based sourcing company based in Mahabaleshwar, Satara, helping international businesses access quality products.",
+      "Learn about Mali International, an Indian export and import company and global sourcing partner based in Mahabaleshwar, Satara, helping international businesses access quality products.",
     path: "/about",
   },
   products: {
@@ -125,9 +125,9 @@ export function generatePageMetadata(key: string): Metadata {
   const seo = pageSEO[key];
   if (!seo) {
     return {
-      title: "Mali International | India Export & Sourcing Company",
+      title: "Mali International | Indian Export & Import Company",
       description:
-        "Connecting international businesses with trusted Indian suppliers across agriculture, food commodities and authentic Mali Chikki from Mahabaleshwar.",
+        "Mali International is an Indian export and import company and global sourcing partner for agricultural products and international trade.",
     };
   }
 
